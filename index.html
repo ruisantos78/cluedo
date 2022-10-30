@@ -11,7 +11,7 @@
             margin: auto;
             margin-top: 20px;
             width: 100%;
-            font-size: 1.7em;
+            font-size: 36pt;
             border: solid 5px dimgray;
             border-spacing: 0;
             background-color: white;
@@ -31,18 +31,19 @@
             display: flex;
             width: 100%;  
             flex-direction: row;   
-            justify-content: space-around;         
+            justify-content: space-around;
         }
 
         tbody tr td {
             border-right: solid 5px dimgray;   
-            padding: 5px;
-            width: 50%;
+            padding: 5px;    
+            width: 50%;        
         }
 
         svg {
             cursor:pointer;
             margin: 0 10px;
+            height: 120px;
         }
     </style>
 </html>
@@ -52,7 +53,6 @@
             var createSvgIcon = function(color, draw) {
                 var svg = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
                 svg.setAttribute('viewBox', '0 0 496.156 496.156');
-                svg.setAttribute('width', '50px')
                 svg.onclick = function() {
                     this.parentElement.querySelectorAll('svg').forEach(icon => icon.querySelector('path').setAttribute('style', 'fill:gainsboro'));
                     this.querySelector('path').setAttribute('style', `fill:${color}`);
