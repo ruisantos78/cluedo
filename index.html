@@ -10,7 +10,7 @@
         table {
             margin: auto;
             margin-top: 20px;
-            width: 1vw;
+            width: 100%;
             font-size: 1.7em;
             border: solid 5px dimgray;
             border-spacing: 0;
@@ -27,13 +27,17 @@
             text-align: left;    
         }
 
-        tbody tr td:first-child {
-            border-right: solid 5px dimgray;
-            width: 350px;
+        tbody tr td:last-child {
+            display: flex;
+            width: 100%;  
+            flex-direction: row;   
+            justify-content: space-around;         
         }
 
         tbody tr td {
+            border-right: solid 5px dimgray;   
             padding: 5px;
+            width: 50%;
         }
 
         svg {
